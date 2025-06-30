@@ -1,12 +1,83 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  background: #f5f8fa;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f8fa;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  align-items: center;
+}
+
+.col-50,
+.col-30,
+.col-70 {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.col-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-30 {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.col-70 {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.spacer {
+  margin-top: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.7em;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0.5em;
+  font-size: 0.85em;
+  margin: 2px;
+}
+
 ul.social-icons {
   padding: 0;
 }
+
 .social-icons li {
   list-style: none;
   display: inline-block;
   border-radius: 2em;
   overflow: hidden;
 }
+
 .social-icons li a {
   display: block;
   padding: 0.3em;
@@ -21,46 +92,130 @@ ul.social-icons {
 .social-icons li:hover a {
   transform: scale(1.15);
 }
+
 .social-icons .linkedin {
-  background: #4875B4;
+  background: #4875b4;
 }
+
 .social-icons .twitter {
-  background: #33CCFF;
+  background: #33ccff;
 }
+
 .social-icons .medium {
   background: #2f2f2f;
 }
+
 .social-icons .github {
   background: #6e5494;
 }
+
 .social-icons .mail {
-    background: #B20000;
-  }
+  background: #b20000;
+}
 
 hr.divider {
-  border-top: 1px solid #DCDCDC;
+  border-top: 1px solid #dcdcdc;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
-.personal-statement {
+.description-text {
   text-align: justify;
 }
 
-.description-text {
-    text-align: justify;
+.profile-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.top-col {
+  margin-top: 15px;
+  padding: 0px 50px;
+}
+
+/* Glass Effect Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Personal Statement Block */
+.personal-statement-block {
+  background-color: #f4fbfd;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* Modules Block */
+.module-block {
+  background-color: #edf7fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.module-list ul {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  list-style-position: inside;
+  border: none;
+}
+
+.module-list ul li {
+  margin-bottom: 10px;
+}
+
+/* White Card for Work Experience & Projects */
+.white-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
   }
 
-.profile-image{
-    height: 200px;
-    width: 200px;
-    align-content: center
-}
+  .col-30 {
+    order: -1; 
+    text-align: center; 
+  }
 
-.top-col{
-    /* padding: 50px;
-    padding-bottom: 0px; */
-    margin-top: 15px;
-    padding: 0px 50px 0px 50px;
+  .col-30,
+  .col-70,
+  .col-50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .top-col {
+    padding: 0;
+  }
+
+  .profile-image {
+    margin: 0 auto;
+    height: 150px;  /* Smaller image height */
+    width: 150px;   /* Smaller image width */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .badge {
+    font-size: 0.9em;
+  }
 }
-  
